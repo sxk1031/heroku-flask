@@ -56,7 +56,7 @@ def index():
                auth_sw = 0
            if (string == 'Journal ref:'):    
                journal_sw = 1
-    	return render_template('index.html', results=results)  
+     	 return render_template('index.html', results=results)  
     except:
          errors.append('url not found')     
   	 return render_template('index.html', errors=errors)
