@@ -22,7 +22,7 @@ def index():
   errors = []
   results = {}
   if request.method == 'POST'
-  try:
+    try:
        unique_authors = []
        journal_list = []
        start = 200
@@ -30,7 +30,7 @@ def index():
 #       start_vals = np.arange(0,np.divmod(total_papers,start)[0])*start
        vals = 0
        url = f'https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=all&classification-physics=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=1993-01-01&date-to_date=&date-date_type=announced_date_first&abstracts=hide&size=200&order=announced_date_first&start={vals}'
-  except:
+    except:
          errors.append('url not found')     
   return render_template('index.html', errors=errors)
 
