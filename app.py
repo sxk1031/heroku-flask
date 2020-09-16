@@ -13,7 +13,6 @@ def about():
 import numpy as np
 import matplotlib.pyplot as plt
 from ipywidgets import interactive
-%matplotlib inline
 
 def plot_func(a, f):
     plt.figure(2)
