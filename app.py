@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 from collections import Counter
 import time
 import matplotlib.pyplot as plt
-%matplotlib inline
 import time
 from matplotlib.backends.backend_pdf import PdfPages
 import urllib.parse
