@@ -21,7 +21,7 @@ app = Flask(__name__)
 def index():
   errors = []
   results = {}
-  if request.method == 'POST'
+  if request.method == 'POST':
     try:
        unique_authors = []
        journal_list = []
