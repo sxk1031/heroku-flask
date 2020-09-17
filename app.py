@@ -32,7 +32,7 @@ def index():
 			vals = 0
 			url = f'https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=all&classification-physics=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=1993-01-01&date-to_date=&date-date_type=announced_date_first&abstracts=hide&size=200&order=announced_date_first&start={vals}'
 			html = urequest.urlopen(url).read()
-			soup = BeautifulSoup(html)
+			soup = BeautifulSoup(html,features="html.parser")
 			for script in soup(["script", "style"]):
 				script.decompose()
 			strips = list(soup.stripped_strings)
