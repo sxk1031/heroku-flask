@@ -21,7 +21,7 @@ app = Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def index():
 	errors = []
-	results = []
+	results = {}
 	if request.method == 'POST':
 		try:
 			unique_authors = []
@@ -58,7 +58,8 @@ def index():
 					journal_sw = 1
 #			results=unique_authors
 			top_authors = Counter(unique_authors).most_common(1000)
-			results=top_authors
+			results = {'a':1, 'b':2, 'c':3}
+#			results=top_authors
 #			print(top_authors[-20:])
 		except:
 			errors.append('url not found')     
