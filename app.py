@@ -63,9 +63,9 @@ def index():
 			errors.append('url not found')     
 	return render_template('index.html', results=results, errors=errors)
 
-@app.route('/about')
-def about():
-	return render_template('about.html')
+#@app.route('/about')
+#def about():
+#	return render_template('about.html')
 
 if __name__ == '__main__':
 	app.run(port=33507)
