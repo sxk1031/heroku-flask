@@ -56,9 +56,10 @@ def index():
 					auth_sw = 0
 				if (string == 'Journal ref:'):    
 					journal_sw = 1
-			results=unique_authors
+#			results=unique_authors
 			top_authors = Counter(unique_authors).most_common(1000)
-			print(top_authors[-20:])
+			results=top_authors
+#			print(top_authors[-20:])
 		except:
 			errors.append('url not found')     
 	return render_template('index.html', results=results, errors=errors)
