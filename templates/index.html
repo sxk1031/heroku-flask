@@ -30,18 +30,20 @@
         </div>
         <div class="col-sm-5 col-sm-offset-1">
           {% if results %}
-            <h1>Frequencies</h1>
+            <h2>Frequencies</h2>
             <br>
             <div id="results">
               <table class="table table-striped" style="max-width: 300px;">
                 <thead>
                   <tr>
-                    <th>Word</th>
+                    <th>Journal</th>
+                    <th>Count</th>
                   </tr>
                 </thead>
-                {% for key in results%}
+                {% for journal, count in results%}
                   <tr>
-                    <td>{{ key }}</td>
+                    <td>{{ journal }}</td>
+                    <td>{{ count }}</td>
                   </tr>
                 {% endfor %}
               </table>

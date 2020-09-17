@@ -56,10 +56,10 @@ def index():
 					auth_sw = 0
 				if (string == 'Journal ref:'):    
 					journal_sw = 1
-			results=unique_authors
-			top_authors = Counter(unique_authors).most_common(1000)
+#			results=unique_authors
+			top_journals = Counter(journal_list).most_common(25)
 #			results = {'a':1, 'b':2, 'c':3}
-#			results=top_authors
+			results = top_journals
 #			print(top_authors[-20:])
 		except:
 			errors.append('url not found')     
