@@ -24,7 +24,7 @@ def index():
 	results = {}
 	if request.method == 'POST':
 		try:
-			print(request.data('number'))
+			print(request.form('number'))
 			unique_authors = []
 			journal_list = []
 			start = 200
