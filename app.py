@@ -56,9 +56,9 @@ def index():
 					auth_sw = 0
 				if (string == 'Journal ref:'):    
 					journal_sw = 1
-#			results=unique_authors
+			results=unique_authors
 			top_authors = Counter(unique_authors).most_common(1000)
-			results = {'a':1, 'b':2, 'c':3}
+#			results = {'a':1, 'b':2, 'c':3}
 #			results=top_authors
 #			print(top_authors[-20:])
 		except:

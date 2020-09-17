@@ -37,13 +37,13 @@
                 <thead>
                   <tr>
                     <th>Word</th>
-                    <th>Count</th>
+                    <!--<th>Count</th>-->
                   </tr>
                 </thead>
-                {% for key, value in results.items()%}
+                {% for key in results%}
                   <tr>
                     <td>{{ key }}</td>
-                    <td>{{ value }}</td>
+                    <!<--td>{{ value }}</td>-->
                   </tr>
                 {% endfor %}
               </table>
