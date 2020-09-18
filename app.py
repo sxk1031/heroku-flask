@@ -64,6 +64,7 @@ def index():
 			results = top_journals
 			print(top_journals)
 		except:
+			print('$$$$$$')
 			errors.append('url not found')     
 	return render_template('index.html', results=results, errors=errors)
 
