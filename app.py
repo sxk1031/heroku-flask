@@ -27,7 +27,7 @@ def index():
 		journal_list = []
 		start = 200
 		total_papers = request.form['number']
-		start_vals = np.arange(0,np.divmod(1000,start)[0])*start
+		start_vals = np.arange(0,np.divmod(int(total_papers),start)[0])*start
 		print('*****',start_vals,total_papers)
 
 #		for vals in start_vals:
