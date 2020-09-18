@@ -21,7 +21,7 @@ app = Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def index():
 	errors = []
-	results = {}
+	results = []
 	if request.method == 'POST':
 		try:
 			unique_authors = []
