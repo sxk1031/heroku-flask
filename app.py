@@ -61,7 +61,7 @@ def index():
 			top_journals = Counter(journal_list).most_common(25)
 #			results = {'a':1, 'b':2, 'c':3}
 			results = top_journals
-#			print(top_authors[-20:])
+			print(top_journals)
 		except:
 			errors.append('url not found')     
 	return render_template('index.html', results=results, errors=errors)
