@@ -14,6 +14,7 @@ import unidecode
 import seaborn as sns
 from collections import Counter
 from numpy import percentile
+from journal_name_dict import journal_name_dict
 
 app = Flask(__name__)
 #from models import Result
@@ -21,7 +22,7 @@ app = Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def index():
 	errors = []
-	results = []
+	results = {}
 	if request.method == 'POST':
 		unique_authors = []
 		journal_list = []
@@ -58,6 +59,7 @@ def index():
 					journal_sw = 1
 #		results=unique_authors
 		top_journals = Counter(journal_list).most_common(25)
+		{journal_name_dict[i]:j for i,j in top_N}
 		results = top_journals
 #		print(top_journals)
 	return render_template('index.html', results=results)
