@@ -59,7 +59,8 @@ def index():
 					journal_sw = 1
 #		results=unique_authors
 		top_journals = Counter(journal_list).most_common(25)
-		results = {journal_name_dict[i]:j for i,j in top_journals}
+		results = top_journals
+#		results = {journal_name_dict[i]:j for i,j in top_journals}
 #		print(top_journals)
 	return render_template('index.html', results=results)
 
