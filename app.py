@@ -25,7 +25,7 @@ def index():
 	errors = []
 	results = {}
 	if request.method == 'POST':
-		directory = '/Users/saurabh/Google Drive/Data_Science_Machine_Learning/astro-ph/'
+		directory = '/Users/saurabh/Google\ Drive/Data_Science_Machine_Learning/astro-ph/'
 		unique_authors = dill.load(open(directory+'unique_authors.pkd', 'rb'))
 		journal_list = dill.load(open(directory+'journal_list.pkd', 'rb'))
 #		results=unique_authors
