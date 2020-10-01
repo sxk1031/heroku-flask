@@ -28,7 +28,8 @@ def index():
 		unique_authors = dill.load(open('unique_authors.pkd', 'rb'))
 		journal_list = dill.load(open('journal_list.pkd', 'rb'))
 #		results=unique_authors
-		top_journals = Counter(journal_list).most_common(25)
+		n_journal = request.form['number']
+		top_journals = Counter(journal_list).most_common(int(n_journal))
 		results = top_journals
 #		results = {journal_name_dict[i]:j for i,j in top_journals}
 #		print(top_journals)
